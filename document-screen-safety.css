@@ -1,0 +1,26 @@
+/* Browser-only overflow protection. Print/PDF geometry remains exact US Letter. */
+@media screen {
+  .dossier-page {
+    height: auto;
+    min-height: 11in;
+    overflow: visible;
+    padding-bottom: .42in;
+  }
+  .page-footer {
+    position: static;
+    margin-top: 18px;
+  }
+  .cover-grid,
+  .thesis-rail,
+  .letter-column {
+    height: auto;
+    min-height: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .dossier-page {
+    min-height: 0;
+    padding-bottom: 1.25rem;
+  }
+}
