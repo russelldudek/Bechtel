@@ -30,3 +30,37 @@ const scenarios = {
  }};
 function renderScenario(key){const s=scenarios[key];document.querySelectorAll('.scenario-btn').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.scenario===key)));document.getElementById('scenario-title').textContent=s.title;document.getElementById('scenario-observation').textContent=s.observation;const badge=document.getElementById('decision-badge');badge.textContent=s.decision;badge.style.background=s.decisionClass==='ready'?'#e2f1ea':s.decisionClass==='revise'?'#f8e8db':'#fae0de';badge.style.color=s.decisionClass==='ready'?'#20725d':s.decisionClass==='revise'?'#a65d34':'#8e2f2b';document.getElementById('value-evidence').textContent=s.value;document.getElementById('reuse-destination').textContent=s.reuse;document.getElementById('package-grid').innerHTML=s.fields.map(f=>`<article class="package-field" data-state="${f[3]||'complete'}"><small>${f[0]}</small><strong>${f[1]}</strong><p>${f[2]}</p></article>`).join('');}
 document.querySelectorAll('.scenario-btn').forEach(b=>b.addEventListener('click',()=>renderScenario(b.dataset.scenario)));document.getElementById('reset-review')?.addEventListener('click',()=>renderScenario('engineering'));renderScenario('engineering');
+
+const pressureSection=document.querySelector('.pressure');
+const tensionLines=document.querySelector('.tension-lines');
+const reducedMotionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
+let tensionFrame=0;
+
+function updateTensionSlide(){
+ if(!pressureSection||!tensionLines)return;
+ if(reducedMotionQuery.matches){
+  tensionLines.style.removeProperty('--tension-slide');
+  return;
+ }
+ const rect=pressureSection.getBoundingClientRect();
+ const viewportHeight=window.innerHeight||document.documentElement.clientHeight;
+ const start=viewportHeight*0.82;
+ const end=-rect.height*0.18;
+ const progress=Math.min(1,Math.max(0,(start-rect.top)/(start-end)));
+ const maxShift=window.innerWidth<=560?48:window.innerWidth<=900?90:150;
+ tensionLines.style.setProperty('--tension-slide',`${Math.round(progress*maxShift)}px`);
+}
+
+function queueTensionSlide(){
+ if(tensionFrame)return;
+ tensionFrame=window.requestAnimationFrame(()=>{
+  tensionFrame=0;
+  updateTensionSlide();
+ });
+}
+
+window.addEventListener('scroll',queueTensionSlide,{passive:true});
+window.addEventListener('resize',queueTensionSlide);
+if(typeof reducedMotionQuery.addEventListener==='function')reducedMotionQuery.addEventListener('change',queueTensionSlide);
+else if(typeof reducedMotionQuery.addListener==='function')reducedMotionQuery.addListener(queueTensionSlide);
+queueTensionSlide();
