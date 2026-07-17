@@ -1,0 +1,5 @@
+.pressure{overflow:hidden;padding-bottom:calc(7rem + 10rem)}
+.tension-lines{transform:translate3d(0,var(--tension-slide,0),0);will-change:transform}
+@media(max-width:900px){.pressure{padding-bottom:calc(7rem + 6rem)}}
+@media(max-width:560px){.pressure{padding-bottom:calc(4.5rem + 3rem)}}
+@media(prefers-reduced-motion:reduce){.tension-lines{transform:none!important;will-change:auto}}
