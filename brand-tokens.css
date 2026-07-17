@@ -1,0 +1,17 @@
+:root {
+  --bechtel-red: #ee2922;
+  --bechtel-ink: #2e4048;
+  --bechtel-blue: #315f73;
+  --bechtel-pale: #e9eef0;
+  --paper: #ffffff;
+  --canvas: #f3f5f5;
+  --muted: #5e6d73;
+  --line: #cad3d7;
+  --line-dark: #7f9098;
+  --candidate-copper: #a65d34;
+  --ready: #20725d;
+  --revise: #a65d34;
+  --hold: #8e2f2b;
+  --font-sans: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: "EB Garamond", Garamond, Georgia, serif;
+}
