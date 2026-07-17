@@ -11,7 +11,7 @@ const outputs = new Map([
   ['work-package-review.html', 'Russell-Dudek-Bechtel-AI-Capability-Work-Package-Review.pdf'],
 ]);
 
-const css = (await Promise.all(['document-core.css','document-components.css','document-layout.css','document-enhancements.css'].map(name => fs.readFile(path.join(root, name), 'utf8')))).join('\n');
+const css = (await Promise.all(['document-core.css','document-components.css','document-layout.css','document-enhancements.css','document-large-type.css'].map(name => fs.readFile(path.join(root, name), 'utf8')))).join('\n');
 const svg = await fs.readFile(path.join(root, 'assets/brand/bechtel-logo-official.svg'));
 const svgUri = `data:image/svg+xml;base64,${svg.toString('base64')}`;
 await fs.mkdir(path.join(root, 'docs'), { recursive: true });
