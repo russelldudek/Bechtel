@@ -1,0 +1,138 @@
+/* Readability-first print reflow. Minimum practical print body target: ~9-10 pt. */
+.dossier-page{padding:.32in .40in .34in}
+.dossier-header{padding:7px 0 8px;margin-bottom:10px}
+.page-code{font-size:8.4px;letter-spacing:.13em;margin-bottom:3px}
+.candidate-name{font-size:25px}
+.candidate-role{font-size:13px;margin-top:3px}
+.brand-block img{width:54px;height:41px}
+.brand-block span{font-size:8px;line-height:1.3}
+.page-footer{left:.40in;right:.40in;font-size:7.8px}
+.kicker,.section-label{font-size:9px;letter-spacing:.12em}
+.section-label{margin-bottom:7px}
+.display-title{font-size:36px;margin:6px 0 9px}
+.lead{font-size:16.5px;line-height:1.3}
+.small{font-size:9.5px}
+.body-copy{font-size:12.4px;line-height:1.45}
+.body-copy p{margin-bottom:9px}
+.tight-list{padding-left:18px}
+.tight-list li{font-size:11px;line-height:1.38;margin:3px 0}
+.compact-list{padding-left:17px}
+.compact-list li{font-size:10px;line-height:1.35;margin:3px 0}
+.section{margin-top:13px}
+.section h2{font-size:13px}.section h3{font-size:11px}
+.control-band{grid-template-columns:1fr 1fr;gap:9px;padding:12px 14px}
+.control-band strong{font-size:9px}.control-band span{font-size:11px;line-height:1.25}
+.mandate-banner{grid-template-columns:.9fr 2.1fr;margin-bottom:12px}
+.mandate-label{padding:12px}.mandate-label b{font-size:9px}.mandate-label span{font-size:13.5px;line-height:1.12}
+.mandate-copy{padding:12px 14px;font-size:15px;line-height:1.3}
+
+/* Resume */
+.resume-layout{grid-template-columns:1.78fr 1.02fr;gap:13px}
+.resume-page2{grid-template-columns:1.52fr .98fr;gap:13px}
+.experience-list{gap:9px}
+.experience-block{padding-top:7px}
+.experience-head h3{font-size:13px}.experience-head time{font-size:8.7px}
+.experience-role{font-size:10.8px;margin:2px 0 4px}
+.experience-block ul{padding-left:17px}.experience-block li{font-size:10.2px;line-height:1.36;margin:2.5px 0}
+.proof-rail{padding:14px;gap:13px}.proof-rail p{font-size:10px;line-height:1.4}
+.metric-stack{gap:8px}.metric-chip{padding:9px}.metric-chip strong{font-size:19px}.metric-chip span{font-size:8.2px;line-height:1.25}
+.capability-grid{gap:7px}.capability-grid span{padding:7px;font-size:9px;line-height:1.2}
+.trace-grid{grid-template-columns:1fr 1fr;gap:8px}.trace-card{padding:9px}.trace-card b{font-size:8.8px}.trace-card span{font-size:10.2px;line-height:1.3}
+.evidence-strip{grid-template-columns:1fr 1fr;gap:8px}.evidence-anchor{padding:9px}.evidence-anchor strong{font-size:8.8px}.evidence-anchor span{font-size:10.2px;line-height:1.28}
+.transfer-grid{gap:8px}.transfer-card{padding:9px}.transfer-card strong{font-size:8.8px}.transfer-card p{font-size:10px;line-height:1.35}
+.dark-panel{padding:14px}.dark-panel h3{font-size:9px}.dark-panel p,.dark-panel li{font-size:9.7px;line-height:1.4}.dark-panel ul{padding-left:17px}
+.resume-trace-table th{font-size:8.4px}.resume-trace-table td{font-size:9.6px;line-height:1.35;padding:7px}
+
+/* Cover letter */
+.cover-grid{grid-template-columns:.9fr 2.1fr;gap:15px;height:auto}
+.thesis-rail{padding:15px;min-height:9.5in}.thesis-rail h2{font-size:24px;line-height:1.08}
+.rail-item{padding:10px 0}.rail-item b{font-size:8.5px}.rail-item span{font-size:10px;line-height:1.4}
+.rail-objection{padding:11px}.rail-objection b{font-size:8.3px}.rail-objection p{font-size:11px;line-height:1.35}
+.letter-column{min-height:9.5in}.letter-meta{font-size:9px;padding-bottom:7px}.letter-address{font-size:10.5px;line-height:1.4;margin:11px 0}
+.letter-body p{font-size:13px;line-height:1.5;margin-bottom:11px}.letter-body p:first-child::first-letter{font-size:34px}
+.letter-proof-grid{grid-template-columns:1fr;gap:6px;margin-top:8px}.letter-proof-grid>div{padding:8px 10px}.letter-proof-grid b{font-size:8.3px}.letter-proof-grid span{font-size:10.3px;line-height:1.3}
+.letter-sign{font-size:17px}.closing-receipt{padding:10px}.closing-receipt b{font-size:8.5px}.closing-receipt span{font-size:10.5px;line-height:1.3}
+
+/* Thesis brief */
+.brief-hero{grid-template-columns:1.25fr .75fr;gap:14px}.brief-hero .side-note{padding:14px}.side-note b{font-size:8.5px}.side-note p{font-size:13px;line-height:1.3}
+.tension-row{padding:11px 0}.tension-row b{font-size:11.2px}
+.mandate-map{grid-template-columns:1fr 1fr;gap:8px}.mandate-node{padding:10px}.mandate-node b{font-size:8.5px}.mandate-node span{font-size:10.5px;line-height:1.3}
+.success-strip{gap:8px}.success-block{padding:10px}.success-block b{font-size:8.3px}.success-block p{font-size:9.7px;line-height:1.35}
+.moment-grid{gap:8px}.moment-card{padding:10px}.moment-card b{font-size:8.3px}.moment-card span{font-size:10.2px;line-height:1.3}
+.pipeline{grid-template-columns:repeat(4,1fr);gap:7px}.pipeline-step{min-height:112px;padding:10px 9px}.pipeline-step:not(:last-child)::after{display:none}.pipeline-step b{font-size:8.5px}.pipeline-step p{font-size:9.5px;line-height:1.32}
+.gate-grid{gap:10px}.decision-gate{padding:11px}.decision-gate h3{font-size:11px}.gate-option{font-size:8px;padding:7px}
+.scorecard th{font-size:8.2px}.scorecard td{font-size:9.6px;line-height:1.35;padding:7px}
+.anatomy-grid{grid-template-columns:1fr 1fr;gap:8px}.anatomy-card{padding:9px}.anatomy-card b{font-size:8.3px}.anatomy-card span{font-size:9.6px;line-height:1.32}
+.anti-strip{grid-template-columns:1fr 1fr;gap:3px;background:transparent}.anti-strip>*{padding:9px}.anti-strip b{font-size:8px}.anti-strip span{font-size:9px;line-height:1.3}
+.proof-map{grid-template-columns:1.08fr .92fr;gap:13px}.proof-item{padding-bottom:10px;margin-bottom:10px}.proof-item b{font-size:11px}.proof-item span{font-size:9.7px}.proof-item p{font-size:9.6px;line-height:1.38}
+.objection-box{padding:14px}.objection-box h2{font-size:21px}.objection-box p{font-size:10.2px;line-height:1.42}
+.question-list li{font-size:11px;line-height:1.3;padding:9px 0}.question-list li::before{font-size:8.2px}
+.receipt-grid{grid-template-columns:1fr 1fr;gap:8px}.receipt{padding:10px}.receipt b{font-size:8.2px}.receipt span{font-size:10px;line-height:1.3}
+
+/* Entry plan */
+.plan-doc .display-title{font-size:34px!important}
+.roadmap{grid-template-columns:1fr;gap:8px}
+.phase-card{display:grid;grid-template-columns:1.05fr 1.55fr 1.05fr;grid-template-areas:"intro actions outputs" "intro actions gate";gap:10px;min-height:0;padding:11px 12px;border-top-width:4px}
+.phase-card .phase-num{font-size:42px;right:10px;top:9px}
+.phase-card time{font-size:8.7px}.phase-card h2{font-size:20px;margin:6px 0 7px}.phase-card>p{font-size:11px;line-height:1.3}
+.phase-card h3{font-size:8.5px;margin:0 0 5px}.phase-card li{font-size:9.5px;line-height:1.3;margin:2px 0}
+.phase-card>time,.phase-card>h2,.phase-card>p{grid-column:1}
+.phase-card>time{grid-row:1}.phase-card>h2{grid-row:1;margin-top:17px}.phase-card>p{grid-row:1;margin-top:45px;padding-right:26px}
+.phase-card>h3:nth-of-type(1),.phase-card>ul:nth-of-type(1){grid-column:2}.phase-card>h3:nth-of-type(1){grid-row:1;align-self:start}.phase-card>ul:nth-of-type(1){grid-row:1;margin-top:22px}
+.phase-card>h3:nth-of-type(2),.phase-card>ul:nth-of-type(2){grid-column:3}.phase-card>h3:nth-of-type(2){grid-row:1;align-self:start}.phase-card>ul:nth-of-type(2){grid-row:1;margin-top:22px}
+.phase-gate{grid-column:3;grid-row:1;align-self:end;position:static;margin-top:0;padding:8px}.phase-gate b{font-size:8px}.phase-gate span{font-size:9.5px;line-height:1.25}
+.integration-band>div{padding:10px}.integration-band b{font-size:8.3px}.integration-band span{font-size:10px;line-height:1.3}
+.cadence-card{padding:10px}.cadence-card h3{font-size:11px}.cadence-card p,.cadence-card li{font-size:10px;line-height:1.36}
+.risk{padding:10px}.risk b{font-size:8.5px}.risk p{font-size:9.8px;line-height:1.35}
+.bottom-dossier-band{padding:11px}.bottom-dossier-band b{font-size:8.5px}.bottom-dossier-band>div>span{font-size:11.5px}.bottom-mini-grid span{font-size:8.5px!important;padding:8px}
+
+/* Work package */
+.form-banner h1{font-size:25px}.form-banner p{font-size:10px;line-height:1.4}.form-banner .status b{font-size:8.5px}.form-banner .status span{font-size:15px}
+.field{padding:8px}.field label{font-size:8.2px}.write-line{height:15px}
+.work-field{padding:9px;min-height:1.43in}.work-field::before{font-size:25px}.work-field h3{font-size:10px}.work-field p{font-size:9.5px;line-height:1.35}.write-area{height:58px}
+.check{padding:8px;font-size:8.5px;line-height:1.35}
+.decision-title h1{font-size:28px}.decision-title p{font-size:11px;line-height:1.35}.disposition-list span{font-size:8.4px;padding:7px 0}
+.value-table th{font-size:8.3px}.value-table td{font-size:9.5px;line-height:1.35;height:.56in}
+.signature{font-size:8.3px}
+
+@media print{
+ .dossier-page{padding:.32in .40in .34in}
+ .page-footer{left:.40in;right:.40in}
+ .resume-layout{grid-template-columns:1.78fr 1.02fr;min-height:0}.resume-page2{grid-template-columns:1.52fr .98fr;min-height:0}
+ .trace-grid,.control-band{grid-template-columns:1fr 1fr}.evidence-strip{grid-template-columns:1fr 1fr}
+ .cover-grid{grid-template-columns:.9fr 2.1fr;height:auto}.letter-column{min-height:9.5in}
+ .mandate-map,.anatomy-grid,.receipt-grid{grid-template-columns:1fr 1fr}.pipeline{grid-template-columns:repeat(4,1fr)}.pipeline-step:not(:last-child)::after{display:none}.anti-strip{grid-template-columns:1fr 1fr}
+ .roadmap{grid-template-columns:1fr}.phase-card{min-height:0}.phase-gate{position:static}
+}
+
+/* Final fit refinements after full-page visual inspection. */
+.resume-doc .body-copy{font-size:13px;line-height:1.46}
+.resume-doc .experience-head h3{font-size:13.4px}
+.resume-doc .experience-role{font-size:11.2px}
+.resume-doc .experience-block li{font-size:10.8px;line-height:1.38}
+.resume-doc .proof-rail p{font-size:10.6px}
+.resume-doc .capability-grid span{font-size:9.4px}
+.resume-doc .transfer-card p{font-size:10.4px}
+.resume-doc .resume-trace-table td{font-size:9.8px}
+.cover-grid{grid-template-columns:.9fr 2.1fr}
+.letter-body p{font-size:12.25px;line-height:1.48;margin-bottom:9px}
+.letter-proof-grid{grid-template-columns:repeat(3,1fr);gap:7px}
+.letter-proof-grid>div{padding:8px}
+.letter-proof-grid b{font-size:8.1px}.letter-proof-grid span{font-size:9.4px;line-height:1.28}
+.letter-sign{font-size:16px}
+.brief-doc .scorecard td{font-size:9.8px}
+.plan-doc .cadence-grid{grid-template-columns:1fr 1fr}
+.work-doc .value-table td{height:.50in}
+.work-doc .work-field{min-height:1.32in}
+.work-doc .write-area{height:52px}
+.work-doc .signature-grid{margin-top:5px}
+@media print{
+ .letter-proof-grid{grid-template-columns:repeat(3,1fr)}
+ .work-doc .value-table td{height:.50in}
+ .work-doc .work-field{min-height:1.32in}
+ .work-doc .write-area{height:52px}
+}
+/* Clear the print footer on the single-page letter without reducing body type. */
+.cover-grid{min-height:0}
+.thesis-rail,.letter-column{min-height:9.44in}
+@media print{.thesis-rail,.letter-column{min-height:9.44in}}
