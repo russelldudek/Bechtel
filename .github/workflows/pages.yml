@@ -1,4 +1,4 @@
-name: Deploy candidate vision
+name: Materialize and deploy document dossier
 
 on:
   push:
@@ -6,13 +6,13 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: pages-bootstrap
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -23,6 +23,30 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Materialize redesigned dossier source
+        run: |
+          cat deploy/dossier-overlay.b64.part* | base64 --decode > /tmp/dossier-overlay.tgz
+          tar -xzf /tmp/dossier-overlay.tgz -C .
+          rm -rf deploy
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "build: materialize engineering control dossier"
+            git push
+          fi
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install PDF renderer
+        run: |
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Generate printable PDFs
+        run: node scripts/generate-pdfs.mjs
+      - name: Remove build-only dependencies
+        run: rm -rf node_modules package.json package-lock.json
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static site
